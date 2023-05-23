@@ -2,6 +2,7 @@ import { HiCollection, HiPlus} from "react-icons/hi";
 
 // eslint-disable-next-line react/prop-types
 export function Header({active}){
+  const nombre = window.localStorage.getItem('user');
 
   const onclickHindel = () =>{
     active();
@@ -17,7 +18,9 @@ export function Header({active}){
           <HiPlus className="icon-plus"/>
         </button>
         <label>
-          Camilo Andrade
+          {
+            nombre
+          }
         </label>
         <img src="/img/user.svg" />
       </nav>

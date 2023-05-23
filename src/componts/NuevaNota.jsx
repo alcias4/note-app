@@ -1,4 +1,5 @@
 import {  useState } from 'react';
+import { idNotasNueva } from '../logic/id';
 import '../styles/nuevaNota.css'
 import { HiXCircle } from "react-icons/hi";
 
@@ -9,8 +10,10 @@ export function NuevaNota({cerrar, datos}){
   const [titulo, setTitulo] = useState();
   const [contenido , setContenido]= useState();
   const [descripcion, setDescripcion] = useState();
+  const {len} = idNotasNueva()
   const clickAdd = ()=>{
     const info = {
+      id: len,
       titulo: titulo,
       contenido: contenido,
       descripcion: descripcion
