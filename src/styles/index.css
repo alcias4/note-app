@@ -1,0 +1,24 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #17181e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#root{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

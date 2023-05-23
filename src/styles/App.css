@@ -1,0 +1,183 @@
+header {
+  width: 100%;
+  background-color: #21212b;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.nav-derecho {
+  display: flex;
+  gap: 10px;
+  margin-left: 25%;
+  align-items: center;
+  font-style: italic;
+}
+
+.icon-collecion {
+  font-size: 25px;
+}
+
+.nav-izquierdo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 25%;
+  font-style: italic;
+}
+
+.btn-plus {
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: hsla(340, 80%, 69%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(340, 80%, 69%, 1) 0%,
+    hsla(15, 93%, 71%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(340, 80%, 69%, 1) 0%,
+    hsla(15, 93%, 71%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(340, 80%, 69%, 1) 0%,
+    hsla(15, 93%, 71%, 1) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EF709B", endColorstr="#FA9372", GradientType=1 );
+
+  transition: all 500ms ease;
+}
+
+.btn-plus:hover{
+  transform: scale(1.05);
+}
+
+.icon-plus {
+  font-size: 20px;
+  color: white;
+}
+
+.nav-izquierdo > img {
+  width: 50px;
+  height: 50px;
+}
+
+
+/*- css del main  -*/
+
+main{
+  padding-top: 50px;
+  width: 50%;
+  align-self: center;
+}
+
+.contenido-titulo{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 50px;
+}
+
+.div-titulo{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.titulo-main{
+  font-weight: 400;
+}
+
+.div-btn-filter{
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.div-btn-filter  button{
+  width: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  background-color: #414052;
+  color: white;
+  cursor: pointer;
+  border: 2px solid #414052 ;
+}
+
+.active{
+  background-color: #181820;
+  border: 2px solid #414052 ;
+}
+
+
+.contenido-notas{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.notas{
+  display: flex;
+  flex-direction: column;
+  background-color: #21212b;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  gap: 10px;
+  padding: 20px;
+}
+
+.notas > article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.notas > article > textarea{
+  resize: none;
+  margin-top: 10px;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.notas > article > h3{
+  background-color: #181820;
+  padding: 10px;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.btn-notas{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.btn-notas > div {
+  display: flex;
+  gap: 10px;
+}
+.btn-notas > div > button{
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+}

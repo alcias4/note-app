@@ -1,0 +1,115 @@
+.nueva-nota{
+  display: flex;
+  flex-direction: column;
+  top: 20%;
+  position: absolute;
+  align-self: center;
+  width: 40%;
+  height: 470px;
+  background-color: #21212b;
+  z-index: 10;
+  border-radius: 20px;
+  animation: aparicion 200ms linear;
+}
+
+.nueva-nota h1{
+  align-self: center;
+  margin-top: 20px;
+}
+
+.nueva-nota section{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  
+}
+
+.nueva-nota section input{
+  width: 70%;
+  align-self: center;
+  padding: 10px;
+  border: none;
+  outline: none ;
+  border-radius: 15px;
+  background-color: #414052;
+  color: white;
+  font-size: 15px;
+}
+
+.nueva-nota section textarea{
+  resize: none;
+  width: 70%;
+  height: 150px;
+  align-self: center;
+  padding: 10px;
+  border: none;
+  outline: none ;
+  border-radius: 15px;
+  max-height: 200px;
+  padding: 10px;
+  background-color: #414052;
+  color: white;
+  font-size: 15px;
+}
+
+
+.nueva-nota button {
+  width: 70%;
+  align-self: center;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  font-size: 15px;
+  cursor: pointer;
+  background: hsla(340, 80%, 69%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(340, 80%, 69%, 1) 0%,
+    hsla(15, 93%, 71%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(340, 80%, 69%, 1) 0%,
+    hsla(15, 93%, 71%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(340, 80%, 69%, 1) 0%,
+    hsla(15, 93%, 71%, 1) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EF709B", endColorstr="#FA9372", GradientType=1 );
+  color: white;
+  transition: all 500ms ease;
+}
+
+
+.nueva-nota button:hover{
+  transform: scale(1.05);
+}
+
+.icon-form-x{
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.icon-form-x:hover{
+  transform: scale(1.2);
+  color: #ffc8c8;
+}
+
+@keyframes aparicion {
+  0%{
+    width: 35%;
+  }
+
+  100%{
+    width: 40%;
+  }
+}
