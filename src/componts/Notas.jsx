@@ -12,7 +12,7 @@ export function Notas({notas, elimiarNota, noti}){
           <span className="contenido">{e.contenido}</span>
         </article>
         <section className="btn-notas">
-          <label>{e.descripcion}</label>
+          <label className="etiqueta">#{e.descripcion}</label>
           <div>
             <button>hecho</button>
             <button onClick={()=>{elimiarNota(e.id)}}>Eliminar</button>

@@ -9,7 +9,7 @@
   background-color: #21212b;
   z-index: 10;
   border-radius: 20px;
-  animation: aparicion 200ms linear;
+  transition: all 500ms ease;
 }
 
 .nueva-nota h1{
@@ -104,12 +104,3 @@
   color: #ffc8c8;
 }
 
-@keyframes aparicion {
-  0%{
-    width: 35%;
-  }
-
-  100%{
-    width: 40%;
-  }
-}
