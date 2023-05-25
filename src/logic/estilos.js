@@ -9,33 +9,3 @@ export const opacity ={
 }
 
 
-
-export function stylosTexarea(contenido){
-  const stylo = {
-    height: "100px"
-  }
-  
-  if(contenido.length > 200 && contenido.length <= 505 ){
-    const stylo = {
-      height: "200px"
-    }
-
-    return stylo
-  }else if(contenido.length > 505 && contenido.length <= 800){
-
-    const stylo = {
-      height: "200px"
-    }
-
-    return stylo
-  }else if(contenido.length > 800){
-
-    const stylo = {
-      height: "300px"
-    }
-
-    return stylo
-  }
-
-  return stylo
-}

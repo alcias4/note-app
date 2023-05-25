@@ -10,7 +10,7 @@ export function Header({active}){
   return <header>
       <nav className="nav-derecho">
         <HiCollection className="icon-collecion" />
-        <h2>Coleccion</h2>
+        <h2>Collection</h2>
       </nav>
 
       <nav className="nav-izquierdo">
