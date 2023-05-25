@@ -265,6 +265,10 @@ main{
   padding: 20px;
 }
 
+.icon-eliminar{
+  display: none;
+}
+
 .notas > article {
   display: flex;
   flex-direction: column;
@@ -371,4 +375,56 @@ main{
   .nueva-nota section textarea, .nueva-nota section input, .nueva-nota button{
     width: 85%;
   }
+}
+
+@media (max-width: 500px){
+  .nav-derecho > h2{
+    display: none;
+  }
+
+  .icon-collecion{
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 420px){
+  .noticia{
+    width: 300px;
+    top: 70px;
+  }
+
+  .noticia > strong{
+    margin-top: 5px;
+  }
+
+  .icon-info{
+    left: 15px;
+  }
+
+  .notas{
+    font-size: 12px;
+  }
+}
+
+
+@media (max-width: 376px){
+
+  .nav-izquierdo > label{
+    font-size: 15px;
+  }
+
+  .btn-notas > div > button{
+    width: auto;
+    padding: 5px;
+  }
+
+  .btn-eliminar {
+    display: none;
+  }
+
+  .icon-eliminar{
+    display: initial;
+  }
+
+
 }

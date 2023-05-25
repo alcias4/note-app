@@ -1,4 +1,4 @@
-
+import { HiTrash } from "react-icons/hi";
 // eslint-disable-next-line react/prop-types
 export function Notas({notas, elimiarNota, noti}){
   
@@ -15,7 +15,10 @@ export function Notas({notas, elimiarNota, noti}){
           <label className="etiqueta">#{e.descripcion}</label>
           <div>
             <button>hecho</button>
-            <button onClick={()=>{elimiarNota(e.id)}}>Eliminar</button>
+            <button onClick={()=>{elimiarNota(e.id)}}>
+              <HiTrash className="icon-eliminar"/>
+              <label className="btn-eliminar">Eliminar</label>
+            </button>
           </div>
         </section>
         
