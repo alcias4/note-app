@@ -400,6 +400,18 @@ main{
 }
 
 @media (max-width: 500px){
+  .noticia{
+    width: 300px;
+  }
+
+  .noticia > strong{
+    margin-top: 0px;
+  }
+
+  .icon-info{
+    left: 15px;
+  }
+
   .nav-derecho > h2{
     display: none;
   }
@@ -432,5 +444,6 @@ main{
   .activeNota-icon{
     padding-top: 0px;
   }
+
 }
 
