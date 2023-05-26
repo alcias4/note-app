@@ -16,7 +16,8 @@ export function NuevaNota({cerrar, datos}){
       id: len,
       titulo: titulo,
       contenido: contenido,
-      descripcion: descripcion
+      descripcion: descripcion,
+      hecho: false
     }
     cerrar()
     datos(info)

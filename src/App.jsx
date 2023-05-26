@@ -6,6 +6,7 @@ import { MenuTresPuntos } from "./componts/Menu";
 import { Notas } from "./componts/Notas";
 import { Informacion } from './componts/Informacion';
 import { Home } from "./componts/Home";
+import confetti from 'canvas-confetti';
 import './styles/App.css'
 import { useState } from "react";
 
@@ -25,12 +26,13 @@ function App() {
     []
   });
 
-  const [notificacin, setNotificacion] = useState(false)
   
   const nombreInfo = (nom) =>{
     window.localStorage.setItem('user', nom);
     setNombre(window.localStorage.getItem('user'));
   }
+
+  const [notificacin, setNotificacion] = useState(false)
 
   
 
@@ -40,8 +42,16 @@ function App() {
     setNotas(JSON.parse(window.localStorage.getItem('notas')))
   }
 
-  const stylosBtn =()=>{
-    setActive(!active)
+  const stylosBtn =(e)=>{
+    if(e.target.id === 'completada'){
+      const d = notas.filter((e)=>{
+        return e.hecho != false;
+      })
+      setNotas(d);
+      setActive(true)
+    }else if(e.target.id === 'todo'){
+      setNotas(JSON.parse(window.localStorage.getItem('notas')))
+    }
     
   }
 
@@ -73,6 +83,17 @@ function App() {
   const noti = () =>{
     setNotificacion(!notificacin)
   }
+
+  const tareaHecha = (e) =>{
+    const nota = notas[e]
+    nota.hecho = !nota.hecho;
+    setNotas(notas)
+    window.localStorage.setItem('notas',JSON.stringify(notas));
+    if(notas[e].hecho === true){
+      confetti()
+    }
+    
+  }
   
   return (
     <>
@@ -87,12 +108,12 @@ function App() {
                 <MenuTresPuntos vaciar={vaciar}  eliminar={elimnarPerfil} noti={noti} notificacin={notificacin}/>
               </div>
               <div className="div-btn-filter">
-                <button onClick={stylosBtn} style={!active ? estilos:null} >Todas</button>
-                <button onClick={stylosBtn} style={active ? estilos:null}>Favoritos</button>
+                <button id='todo' onClick={stylosBtn} style={!active ? estilos:null} >Todas</button>
+                <button id='completada' onClick={stylosBtn} style={active ? estilos:null}>Completadas</button>
               </div>
               
             </aside>
-            <Notas notas={notas} elimiarNota={elimiarNota} noti={notificacin}/>
+            <Notas notas={notas} elimiarNota={elimiarNota} noti={notificacin} tareaHecha={tareaHecha}/>
             <Informacion infoTrue={notificacin} noti={noti}/>
           </main>
         </> : 

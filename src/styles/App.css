@@ -141,6 +141,10 @@ main{
   gap: 20px;
 }
 
+#completada{
+  width: 120px;
+}
+
 .menuTresPuntos > div > button{
   margin-bottom: 3px;
   padding:10px;
@@ -265,6 +269,8 @@ main{
   padding: 20px;
 }
 
+
+
 .icon-eliminar{
   display: none;
 }
@@ -299,8 +305,24 @@ main{
   border: none;
   text-transform: capitalize;
   cursor: pointer;
+  transition: all 500ms ease;
 }
 
+.activeNota{
+  background-color: green;
+  color: white;
+  width: 30px !important;
+  height:30px ;
+  border-radius: 50% !important;
+}
+.activeNota-icon{
+  padding-top: 4px;
+  font-size: 20px;
+}
+
+.iconCheck{
+  display: none;
+}
 .contenido{
   white-space: pre-line;
   padding: 10px;
@@ -385,29 +407,6 @@ main{
   .icon-collecion{
     font-size: 30px;
   }
-}
-
-@media (max-width: 420px){
-  .noticia{
-    width: 300px;
-    top: 70px;
-  }
-
-  .noticia > strong{
-    margin-top: 5px;
-  }
-
-  .icon-info{
-    left: 15px;
-  }
-
-  .notas{
-    font-size: 12px;
-  }
-}
-
-
-@media (max-width: 376px){
 
   .nav-izquierdo > label{
     font-size: 15px;
@@ -426,5 +425,12 @@ main{
     display: initial;
   }
 
+  .nueva-nota{
+    width: 90%;
+  }
 
+  .activeNota-icon{
+    padding-top: 0px;
+  }
 }
+
