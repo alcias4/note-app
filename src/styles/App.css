@@ -26,6 +26,7 @@ header {
   gap: 10px;
   margin-right: 25%;
   font-style: italic;
+  text-transform: capitalize;
   transition: all 500ms ease;
 }
 

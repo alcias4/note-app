@@ -43,15 +43,18 @@ function App() {
   }
 
   const stylosBtn =(e)=>{
-    if(e.target.id === 'completada'){
-      const d = notas.filter((e)=>{
-        return e.hecho != false;
-      })
-      setNotas(d);
-      setActive(true)
-    }else if(e.target.id === 'todo'){
-      setActive(false)
-      setNotas(JSON.parse(window.localStorage.getItem('notas')))
+    
+    if(notas !== []){
+      if(e.target.id === 'completada'){
+        const d = notas.filter((e)=>{
+          return e.hecho != false;
+        })
+        setNotas(d);
+        setActive(true)
+      }else if(e.target.id === 'todo'){
+        setActive(false)
+        setNotas(JSON.parse(window.localStorage.getItem('notas')))
+      }
     }
     
   }
