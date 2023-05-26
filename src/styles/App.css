@@ -4,7 +4,7 @@ header {
   display: flex;
   justify-content: space-between;
   height: 60px;
-
+  font-family: 'Poppins', sans-serif;
 }
 
 .nav-derecho {
@@ -79,6 +79,7 @@ header {
 /*- css del main  -*/
 
 main{
+  font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -191,7 +192,7 @@ main{
   margin-top: 20px;
   width: 100%;
   text-align: center;
-  color: rgb(223, 69, 69);;
+  color: rgb(223, 69, 69);
 }
 
 .x-info{
