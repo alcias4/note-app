@@ -44,8 +44,8 @@ function App() {
 
   const stylosBtn =(e)=>{
     
-    if(notas !== []){
-      if(e.target.id === 'completada'){
+    if(notas !== [] ){
+      if(e.target.id === 'completada' && notas){
         const d = notas.filter((e)=>{
           return e.hecho != false;
         })
