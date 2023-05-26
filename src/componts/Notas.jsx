@@ -11,7 +11,7 @@ export function Notas({notas, elimiarNota, noti, tareaHecha}){
   return<section className="contenido-notas">
   {
     // eslint-disable-next-line react/prop-types
-    notas.map((e, i)=>{
+    notas && notas.map((e, i)=>{
       return <div key={i} className="notas" style={noti?{opacity:0.5}: null}>
         <article>
           <h3>{e.titulo}</h3>
