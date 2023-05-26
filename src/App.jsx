@@ -50,6 +50,7 @@ function App() {
       setNotas(d);
       setActive(true)
     }else if(e.target.id === 'todo'){
+      setActive(false)
       setNotas(JSON.parse(window.localStorage.getItem('notas')))
     }
     
